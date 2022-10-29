@@ -27,11 +27,29 @@ Dentro de esta sección se importan todas las librerias a utilizar para completa
 
 ### 2) Cargar la data a utilizar
 
-Para poder desarrollar esta sección se tienen que cargar los datos iniciales entregados. El archivo correspondiente a **labels** se encuentra adjunto dentro de este github(Dataframe -> datacurvasdeluz -> dataoriginal), sin embargo, el archivo correspondiente a **alert_detections** posee una gran cantidad de data por lo que no se pudo agregar de manera exitosa en este github sin que corrumpiera con los otros archivos, se pide porfavor crear una copia de este archivo dentro de su drive personal a partir del siguiente [Google Drive](https://drive.google.com/drive/folders/1EX7qSca6i-R8HOZMSushjxiW3YoPQ9Nw?usp=sharing) para poder trabajar de manera correcta con el archivo (el archivo se encuentra dentro de DataFrames).
+Para poder desarrollar esta sección se tienen que cargar los datos iniciales entregados. El archivo correspondiente a **labels** se encuentra adjunto dentro de este github *(Dataframe -> datacurvasdeluz -> dataoriginal)*, sin embargo, el archivo correspondiente a **alert_detections** posee una gran cantidad de data por lo que no se pudo agregar de manera exitosa en este github sin que corrumpiera con los otros archivos, se pide porfavor crear una copia de este archivo dentro de su drive personal a partir del siguiente [Google Drive](https://drive.google.com/drive/folders/1EX7qSca6i-R8HOZMSushjxiW3YoPQ9Nw?usp=sharing) para poder trabajar de manera correcta con el archivo (el archivo se encuentra dentro de DataFrames).
 
 ### 3) Obtención de estrellas periódicas
 
-Debido a que el proyecto corresponde especificamente a estrellas periódicas, se procede eliminando todas las estrellas que no correspondan de la data de **labels** creando una función auxiliar que recorra la data de labels y dropee aquellas estrellas no necesarias. Correr este bloque en su totalidad.
+Debido a que el proyecto corresponde específicamente a estrellas periódicas, se procede eliminando todas las estrellas que no correspondan de la data de **labels** creando una función auxiliar que recorra la data de labels y elimine aquellas estrellas no necesarias. Correr este bloque en su totalidad. Todas las estrellas periódicas quedan guardadas en la variable **labels**.
 
 ### 4) Sampling de estrellas y Curvas de Luz
-Para trabajar de manera eficiente se obtuvieron **DataFrames** para cada una de las clases de estrellas a partir de las función single_class, dentro de este se pueden verificar las líneas de código comentadas para obtener cada una de clase. Al ejecutar este código se esta alterando el **DataFrame** de la sección anterior, por lo que para obtener los **DataFrame** de cada una de las clases porfavor descomentar la línea correspondiente a la clase que se desea recuperar , si se quiere obtener una clase diferente favor de ejructar nuevamente el bloque correspondiente a la funcino pe upara ejercutar la sección anterior cada vez que se 
+Para trabajar de manera eficiente se obtuvieron **DataFrames** para cada una de las clases de estrellas a partir de las función **single_class**, dentro de este se pueden verificar las líneas de código comentadas para obtener cada una de clase. Para obtener los **DataFrame** de cada una de las clases porfavor descomentar la línea correspondiente a la clase que se desea recuperar. Debido a que al ejecutar este código se esta alterando el **DataFrame** de la sección anterior, si se quiere obtener una clase diferente favor comentar nuevamente la línea no correspondiente, descomentar la línea de la clase deseada y  ejecutar nuevamente los bloques correspondiente a la sección 2 y 3. Este proceso tiene un tiempo de ejecución de entre 3 y 5 minutos.
+
+Para facilitar el desarrollo de los experimentos se guardaron cada uno de los **DataFrame** correspondientes a cada una de las clases en variables, favor de subir estos documentos en su copia de Drive personal para ejecutar. Estos **DataFrames** estan adjuntos en el github *(Dataframe -> datacurvasdeluz -> data separada en clases)*.
+
+Para obtener las curvas de luz correspondientes se debe realizar un sampling para cada una de las clases de estrellas previamente, estas se guardan en la variable **oid_sample**. Para obtener el sample correspondiente a cada una de clases porfavor descomentar las líneas de codigo correspondiente a la clase con la que desee trabajar. Para obtener la curva de luz ejecute el código con la función **light_curve** con el **oid_sample** de su interés y la data de **alert_detections**. Estos resultados de curva de luz se guardan en la variable **df**.
+
+## 5) Extracción de características
+
+Para obtener finalmente las características de cada uno de los samples de las estrellas se debe realizar un preprocesamiento para la asignación de las bandas de luz r y g. Ejecutar el código correspondiente a **preprocessing** con su variable **df** obtenido en la sección anterior. El restultado de este proceso se guarda en la variable **df_prep**
+
+Como paso final, ejecutar el código con la función **features** con su variable **df_prep**. Este proceso tiene un tiempo de ejecución de entre 8 y 10 minutos. Se pueden guardar los datos obtenidos con el bloque adjuntado al final, favor de descomentar en caso de que se requiera analizar.
+
+Se da a fin la ejecución del primer jupyter notebook.
+
+## Reducción de Dimensiones
+
+### 1) Librerías a importar para la experiencia
+Dentro de esta sección se importan todas las librerias a utilizar para completar la experiencia. Porfavor instalar las librerías en caso de que no las posea.
+
