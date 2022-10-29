@@ -31,16 +31,17 @@ Para poder desarrollar esta sección se tienen que cargar los datos iniciales en
 
 ### 3) Obtención de estrellas periódicas
 
-Debido a que el proyecto corresponde específicamente a estrellas periódicas, se procede eliminando todas las estrellas que no correspondan de la data de **labels** creando una función auxiliar que recorra la data de labels y elimine aquellas estrellas no necesarias. Correr este bloque en su totalidad. Todas las estrellas periódicas quedan guardadas en la variable **labels**.
+Debido a que el proyecto corresponde específicamente a estrellas periódicas, se procede eliminando todas las estrellas que no correspondan de la data de **labels** creando una función auxiliar que recorra la data de labels y elimine aquellas estrellas no necesarias. Ejecutar este bloque en su totalidad. Todas las estrellas periódicas quedan guardadas en la variable **labels**.
 
 ### 4) Sampling de estrellas y Curvas de Luz
+
 Para trabajar de manera eficiente se obtuvieron **DataFrames** para cada una de las clases de estrellas a partir de las función **single_class**, dentro de este se pueden verificar las líneas de código comentadas para obtener cada una de clase. Para obtener los **DataFrame** de cada una de las clases porfavor descomentar la línea correspondiente a la clase que se desea recuperar. Debido a que al ejecutar este código se esta alterando el **DataFrame** de la sección anterior, si se quiere obtener una clase diferente favor comentar nuevamente la línea no correspondiente, descomentar la línea de la clase deseada y  ejecutar nuevamente los bloques correspondiente a la sección 2 y 3. Este proceso tiene un tiempo de ejecución de entre 3 y 5 minutos.
 
 Para facilitar el desarrollo de los experimentos se guardaron cada uno de los **DataFrame** correspondientes a cada una de las clases en variables, favor de subir estos documentos en su copia de Drive personal y cambiar las rutas desginadas para ejecutar. Estos **DataFrames** estan adjuntos en el github *(Dataframe -> datacurvasdeluz -> data separada en clases)*.
 
 Para obtener las curvas de luz correspondientes se debe realizar un sampling para cada una de las clases de estrellas previamente, estas se guardan en la variable **oid_sample**. Para obtener el sample correspondiente a cada una de clases porfavor descomentar las líneas de codigo correspondiente a la clase con la que desee trabajar. Para obtener la curva de luz ejecute el código con la función **light_curve** con el **oid_sample** de su interés y la data de **alert_detections**. Estos resultados de curva de luz se guardan en la variable **df**.
 
-## 5) Extracción de características
+### 5) Extracción de características
 
 Para obtener finalmente las características de cada uno de los samples de las estrellas se debe realizar un preprocesamiento para la asignación de las bandas de luz r y g. Ejecutar el código correspondiente a **preprocessing** con su variable **df** obtenido en la sección anterior. El restultado de este proceso se guarda en la variable **df_prep**
 
@@ -54,8 +55,36 @@ Se da a fin la ejecución del primer jupyter notebook.
 
 Dentro de esta sección se importan todas las librerías a utilizar para completar la experiencia. Porfavor instalar las librerías en caso de que no las posea.
 
-## 2) Unión de la data de características de todas las clases
+### 2) Unión de la data de características de todas las clases
 
 En esta sección se unen cada uno de los **DataFrame** con las características de las 6 clases de estrellas periódicas. Estos **DataFrame** fueron obtenidos dentro la sección **5)** del notebook anterior, estos se adjuntan en el presente repositorio *(Dataframe -> datareducciondim)*. Para poder optimizar el proceso se adjunta de todas maneras el archivo completo unido *(Dataframe -> datareducciondim)*. Favor de cambiar las rutas correspondientes en las variables a definir.
 
-## 3) Situación inicial
+### 3) Situación inicial
+
+Este bloque solo se utiliza para poder visualizar la data y verificar sus datos. Ejecutar en su totalidad.
+
+### 4) Dropeo de datos no numéricos
+
+Dentro de este bloque se eliminan todas las estrellas que posean valores nulos, además, se procede eliminando la columna con las identificaciones de las estrellas. Ejecutar en su totalidad.
+
+### 5) Oversampling
+
+Debido a que se elimina una gran cantidad de estrellas debido a sus valores nulos, se realiza un oversampling para poder balancear la data. Con el oversampling se alcanza al valor de clase de estrellas que más posea. Hay que notar que la data posee una columna con las clases respectivas de las estrellas, se procede a despremender esta columna para obtener dos **DataFrame**, el primero con los datos númericos (características) y el segundo con las clases. Ejecutar en su totalidad.
+
+### 6) Normalización de features
+
+Para poder realizar la reducción de dimensiones se debe normalizar la data balanceada anteriormente. Se utiliza la función MinMaxScaler para llevar esto a cabo. Ejecutar en su totalidad.
+
+### 7) Verificación de resultados preliminares con PCA
+
+Para obtener buenos resultados de clasificación se debe verificar que caracterísitcas influyen/importan a la hora de realizar el proceso de **clustering**, por esta razón se obtienen resultados preliminares utilizando el método de **PCA** para poder analizar si son resultados que poseen sentido o no. Ejecutar en sus totalidad.
+
+### 8) Split Data
+
+Para poder trabajar con un **AutoEncoder** para realizar la reducción de dimensiones se debe dividir la data a utilizar en datos de entrenamiento y de prueba, se procede diviendo la data normalizada en la sección **6)**. Ejecutar en su totalidad.
+
+### 9) Autoencoder
+
+Este bloque corresponde a un intento propio de **AutoEncoder**. Porfabor no ejecutar ya que aún no es funcional.
+
+Se da a fin la ejecución del segundo jupyter notebook.
