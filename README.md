@@ -24,6 +24,7 @@ Este jupyter notebook se divide en 5 secciones las cuales corresponden a las sig
 ### Librerías a importar para la experiencia
 
 Dentro de esta sección se importan todas las librerias a utilizar para completar la experiencia. Una vez que se complete la instalación para las librerías **TurboFATS** y **lc_clssifier** favor de reiniciar el entorno de ejecución para poder importar las funciones que se encuentran en el bloque posterior.
-###Cargar la data a utilizar
 
-Para poder desarrollar esta sección se tienen que cargar los datos iniciales entregados. El archivo correspondiente a **labels** se encuentra adjunto dentro de este github(Dataframe -> datacurvasdeluz -> dataoriginal), sin embargo, el archivo correspondiente a **alerts** posee una gran cantidad de data por lo que no se pudo agregar de manera exitosa en este github sin que corrumpiera con los otros archivos, se pide porfavor crear una copia de este archivo dentro de su drive personal a partir del siguiente [Google Drive](https://drive.google.com/drive/folders/1EX7qSca6i-R8HOZMSushjxiW3YoPQ9Nw?usp=sharing) para poder trabajar de manera correcta con el archivo. 
+### Cargar la data a utilizar
+
+Para poder desarrollar esta sección se tienen que cargar los datos iniciales entregados. El archivo correspondiente a **labels** se encuentra adjunto dentro de este github(Dataframe -> datacurvasdeluz -> dataoriginal), sin embargo, el archivo correspondiente a **alert_detections** posee una gran cantidad de data por lo que no se pudo agregar de manera exitosa en este github sin que corrumpiera con los otros archivos, se pide porfavor crear una copia de este archivo dentro de su drive personal a partir del siguiente [Google Drive](https://drive.google.com/drive/folders/1EX7qSca6i-R8HOZMSushjxiW3YoPQ9Nw?usp=sharing) para poder trabajar de manera correcta con el archivo (el archivo se encuentra dentro de DataFrames).
