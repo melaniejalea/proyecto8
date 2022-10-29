@@ -8,7 +8,7 @@ Estudiantes: Macarena Ríos y Melanie Peña
 
 Ayudante: Rafael de la Sotta Vargas
 
-Este proyecto consiste en la clasificación de las caracteristicas obtenidas a partir de las curvas de luz de las estrellas periódicas en base a data entregada del stream ALeRCE-ZTF. 
+Este proyecto consiste en la clasificación de las distintas clases de estrellas periódicas obtenidas a partir de las características de sus curvas de luz de en base a data entregada del stream ALeRCE-ZTF. 
 
 Este proyecto se separa en dos jupyter notebooks para poder optimizar los procesos de ejecución de los algoritmos y no irrumpir en la data obtenida en cada una de las funciones correspondientes de los notebooks. Ambos notebooks se encuentran en el presente github y su orden de ejecutamiento corresponde al siguiente:
 
