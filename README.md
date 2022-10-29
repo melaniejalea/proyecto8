@@ -2,13 +2,13 @@
 
 ## Grupo b 
 
-### Clustering y visualizacion de curvas de luz de estrellas periódicas
+### Clustering y visualización de curvas de luz de estrellas periódicas
 
 Estudiantes: Macarena Ríos y Melanie Peña
 
 Ayudante: Rafael de la Sotta Vargas
 
-Este proyecto consiste en la clasificación de las caracteristicas obtenidas a partir de las curvas de luz de las estrellas periodicas en base a data entregada del stream ALeRCE-ZTF. 
+Este proyecto consiste en la clasificación de las caracteristicas obtenidas a partir de las curvas de luz de las estrellas periódicas en base a data entregada del stream ALeRCE-ZTF. 
 
 Este proyecto se separa en dos jupyter notebooks para poder optimizar los procesos de ejecución de los algoritmos y no irrumpir en la data obtenida en cada una de las funciones correspondientes de los notebooks. Ambos notebooks se encuentran en el presente github y su orden de ejecutamiento corresponde al siguiente:
 
@@ -36,7 +36,7 @@ Debido a que el proyecto corresponde específicamente a estrellas periódicas, s
 ### 4) Sampling de estrellas y Curvas de Luz
 Para trabajar de manera eficiente se obtuvieron **DataFrames** para cada una de las clases de estrellas a partir de las función **single_class**, dentro de este se pueden verificar las líneas de código comentadas para obtener cada una de clase. Para obtener los **DataFrame** de cada una de las clases porfavor descomentar la línea correspondiente a la clase que se desea recuperar. Debido a que al ejecutar este código se esta alterando el **DataFrame** de la sección anterior, si se quiere obtener una clase diferente favor comentar nuevamente la línea no correspondiente, descomentar la línea de la clase deseada y  ejecutar nuevamente los bloques correspondiente a la sección 2 y 3. Este proceso tiene un tiempo de ejecución de entre 3 y 5 minutos.
 
-Para facilitar el desarrollo de los experimentos se guardaron cada uno de los **DataFrame** correspondientes a cada una de las clases en variables, favor de subir estos documentos en su copia de Drive personal para ejecutar. Estos **DataFrames** estan adjuntos en el github *(Dataframe -> datacurvasdeluz -> data separada en clases)*.
+Para facilitar el desarrollo de los experimentos se guardaron cada uno de los **DataFrame** correspondientes a cada una de las clases en variables, favor de subir estos documentos en su copia de Drive personal y cambiar las rutas desginadas para ejecutar. Estos **DataFrames** estan adjuntos en el github *(Dataframe -> datacurvasdeluz -> data separada en clases)*.
 
 Para obtener las curvas de luz correspondientes se debe realizar un sampling para cada una de las clases de estrellas previamente, estas se guardan en la variable **oid_sample**. Para obtener el sample correspondiente a cada una de clases porfavor descomentar las líneas de codigo correspondiente a la clase con la que desee trabajar. Para obtener la curva de luz ejecute el código con la función **light_curve** con el **oid_sample** de su interés y la data de **alert_detections**. Estos resultados de curva de luz se guardan en la variable **df**.
 
@@ -51,5 +51,11 @@ Se da a fin la ejecución del primer jupyter notebook.
 ## Reducción de Dimensiones
 
 ### 1) Librerías a importar para la experiencia
-Dentro de esta sección se importan todas las librerias a utilizar para completar la experiencia. Porfavor instalar las librerías en caso de que no las posea.
 
+Dentro de esta sección se importan todas las librerías a utilizar para completar la experiencia. Porfavor instalar las librerías en caso de que no las posea.
+
+## 2) Unión de la data de características de todas las clases
+
+En esta sección se unen cada uno de los **DataFrame** con las características de las 6 clases de estrellas periódicas. Estos **DataFrame** fueron obtenidos dentro la sección **5)** del notebook anterior, estos se adjuntan en el presente repositorio *(Dataframe -> datareducciondim)*. Para poder optimizar el proceso se adjunta de todas maneras el archivo completo unido *(Dataframe -> datareducciondim)*. Favor de cambiar las rutas correspondientes en las variables a definir.
+
+## 3) Situación inicial
