@@ -12,8 +12,8 @@ Este proyecto consiste en la clasificación de las caracteristicas obtenidas a p
 
 Este proyecto se separa en dos jupyter notebooks para poder optimizar los procesos de ejecución de los algoritmos y no irrumpir en la data obtenida en cada una de las funciones correspondientes de los notebooks. Ambos notebooks se encuentran en el presente github y su orden de ejecutamiento corresponde al siguiente:
 
-*1) Curvas de luz y extracción de características
-*2) Reducción de dimensiones
+* 1) Curvas de luz y extracción de características
+* 2) Reducción de dimensiones
 
 A continuacion se entregan los pasos a seguir para cada uno de los códigos correspondientes:
 
