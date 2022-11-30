@@ -1,1 +1,0 @@
-reduccion prueba contiene las visualizaciones correctas con pca y umap :)
