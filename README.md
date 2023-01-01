@@ -55,36 +55,8 @@ Se da a fin la ejecución del primer jupyter notebook.
 
 Dentro de esta sección se importan todas las librerías a utilizar para completar la experiencia. Porfavor instalar las librerías en caso de que no las posea.
 
-### 2) Unión de la data de características de todas las clases
+### 2) Autoencoder
 
-En esta sección se unen cada uno de los **DataFrame** con las características de las 6 clases de estrellas periódicas. Estos **DataFrame** fueron obtenidos dentro la sección **5)** del notebook anterior, estos se adjuntan en el presente repositorio *(Dataframe -> datareducciondim)*. Para poder optimizar el proceso se adjunta de todas maneras el archivo completo unido *(Dataframe -> datareducciondim)*. Favor de cambiar las rutas correspondientes en las variables a definir.
-
-### 3) Situación inicial
-
-Este bloque solo se utiliza para poder visualizar la data y verificar sus datos. Ejecutar en su totalidad.
-
-### 4) Dropeo de datos no numéricos
-
-Dentro de este bloque se eliminan todas las estrellas que posean valores nulos, además, se procede eliminando la columna con las identificaciones de las estrellas. Ejecutar en su totalidad.
-
-### 5) Oversampling
-
-Debido a que se elimina una gran cantidad de estrellas debido a sus valores nulos, se realiza un oversampling para poder balancear la data. Con el oversampling se alcanza al valor de clase de estrellas que más posea. Hay que notar que la data posee una columna con las clases respectivas de las estrellas, se procede a despremender esta columna para obtener dos **DataFrame**, el primero con los datos númericos (características) y el segundo con las clases. Ejecutar en su totalidad.
-
-### 6) Normalización de features
-
-Para poder realizar la reducción de dimensiones se debe normalizar la data balanceada anteriormente. Se utiliza la función MinMaxScaler para llevar esto a cabo. Ejecutar en su totalidad.
-
-### 7) Verificación de resultados preliminares con PCA
-
-Para obtener buenos resultados de clasificación se debe verificar que caracterísitcas influyen/importan a la hora de realizar el proceso de **clustering**, por esta razón se obtienen resultados preliminares utilizando el método de **PCA** para poder analizar si son resultados que poseen sentido o no. Ejecutar en sus totalidad.
-
-### 8) Split Data
-
-Para poder trabajar con un **AutoEncoder** para realizar la reducción de dimensiones se debe dividir la data a utilizar en datos de entrenamiento y de prueba, se procede diviendo la data normalizada en la sección **6)**. Ejecutar en su totalidad.
-
-### 9) Autoencoder
-
-Este bloque corresponde a un intento propio de **AutoEncoder**. Porfabor no ejecutar ya que aún no es funcional.
+Se entregan los 3 autoencoder para los distintos intentos de reducción de dimensiones. Porfavor subir la data adjuntada en  "data reducciondim" y correr cada uno de los jupyter notebooks para obtener los resultados correspondientes.
 
 Se da a fin la ejecución del segundo jupyter notebook.
